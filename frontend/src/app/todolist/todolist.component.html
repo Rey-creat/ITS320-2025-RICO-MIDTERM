@@ -1,0 +1,48 @@
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-300 to-yellow-500">
+  <div class="todolist-form p-10 rounded-2xl shadow-2xl relative w-full max-w-md bg-gray-900 bg-opacity-90 backdrop-blur-md">
+    <h1 class="text-5xl font-extrabold mb-10 text-center text-yellow-400 text-shadow-lg">
+      My To-Do List
+    </h1>
+
+    <div class="flex gap-2 mb-4">
+      <input
+        type="text"
+        [formControl]="taskControl"
+        placeholder="Enter a task..."
+        class="w-full px-5 py-3 rounded-lg border border-yellow-500 bg-transparent text-yellow-200 placeholder-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-opacity-70 transition"
+      />
+      <button *ngIf="editingTask; else addButton" (click)="updateTask()" class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-4 py-2 rounded-lg hover:shadow-lg transition duration-200">
+        <i class="fas fa-save"></i> Update
+      </button>
+      <ng-template #addButton>
+        <button (click)="addTask()" class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black px-4 py-2 rounded-lg hover:shadow-lg transition duration-200">
+          <i class="fas fa-plus"></i> Add
+        </button>
+      </ng-template>
+    </div>
+
+    <ul class="mt-4 list-disc list-inside">
+      <li *ngFor="let task of tasks; let i = index" class="flex justify-between items-center bg-gray-800 p-3 mt-2 rounded-lg shadow hover:shadow-lg transition duration-200">
+        <span class="flex items-center">
+          <i class="fas fa-tasks mr-2 text-yellow-500"></i>
+          <span class="text-yellow-200">{{ task.todolist }}</span>
+        </span>
+        <div class="flex gap-2 ml-auto">
+          <button (click)="editTask(task)" class="text-blue-500 hover:text-blue-700 transition duration-200">
+            <i class="fas fa-edit"></i> Edit
+          </button>
+          <button (click)="removeTask(i)" class="text-red-500 hover:text-red-700 transition duration-200">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <div class="mt-4 text-center">
+      <p class="text-yellow-300">You have {{ tasks.length }} tasks.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />

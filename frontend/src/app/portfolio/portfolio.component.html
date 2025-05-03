@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="portfolio.component.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span class="blue">R</span><span class="white">R</span>
+        </div>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        <button class="right-btn">Subscribed</button>
+    </nav>
+    
+    <div class="hero-text">
+        <div class="introduction">
+            <h1>
+                <span class="intro-text">Hello, my name is</span> <br>
+                Rey <span class="highlight">Rico</span>
+            </h1>
+            <p>I am a Web Developer</p>
+            <button class="start-btn">Let's Start</button>
+        </div>
+        <img src="images/profile.png" alt="">
+    </div>
+   <!-- About Section -->
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <div class="image-container">
+            <img src="images/about.png" alt="About Me">
+        </div>
+        <p>
+            I am a 23-year-old second-year Bachelor of Science in Information Technology (BSIT) student with a passion for programming, basketball, and mobile gaming. Currently, I am an intern at La Consolacion College Bacolod, where I am gaining valuable experience in the field of technology. I am dedicated to honing my skills and expanding my knowledge to make meaningful contributions to the tech industry.
+        </p>
+        <p>
+            As a developer and designer, I specialize in frontend development, creating intuitive and visually appealing user interfaces. I am proficient in HTML, CSS, and JavaScript, and I am continuously learning new technologies to enhance my skill set.
+        </p>
+        <a href="#contact">
+            <button class="contact-btn">Let's Talk</button>
+        </a>
+    </div>
+
+   <!-- Services Section -->
+<div class="container" id="services">
+    <h2>Services</h2>
+    <div class="services-content">
+        <div class="service-item">
+            <div class="service-logo">
+                <i class="fas fa-code"></i> 
+            </div>
+            <h3>Web Development</h3>
+            <p>Building responsive and modern websites using the latest technologies.</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+        <div class="service-item">
+            <div class="service-logo">
+                <i class="fas fa-paint-brush"></i> 
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>Designing intuitive and visually appealing user interfaces for your applications.</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+        <div class="service-item">
+            <div class="service-logo">
+                <i class="fas fa-mobile-alt"></i> 
+            </div>
+            <h3>Mobile Development</h3>
+            <p>Creating mobile applications for both Android and iOS platforms.</p>
+            <button class="read-more-btn">Read More</button>
+        </div>
+    </div>
+</div>
+    <!-- Skills Section -->
+    <div class="container" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-content">
+            <div class="skill-item">
+                <div class="skill-logo">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-logo">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-logo">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-logo">
+                    <i class="fab fa-react"></i>
+                </div>
+                <h3>React</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-logo">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <h3>Git</h3>
+            </div>
+            <div class="skill-item">
+                <div class="skill-logo">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database Management</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section  -->
+<div class="contact-us">
+    <h1>CONTACT ME</h1>
+    <div class="contact-info-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <p>Email: <a href="mailto:rey.rico&#64;lccbonline.edu.ph">rey.rico&#64;lccbonline.edu.ph</a></p>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <p>Phone: <a href="tel:+0930 584 3503">+0930 584 3503</a></p>
+        </div>
+        <div class="social-media">
+          <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://steamcommunity.com/id/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Steam">
+            <i class="fab fa-steam"></i>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+  </div>
+  <!-- Footer Section -->
+<footer class="footer-container">
+    <div class="portfoliotext">
+        <p>© 2024 React - Portfolio</p>
+    </div>
+
+    <div class="line">
+        <p>|</p>
+    </div>
+
+    <div class="footernavlinks">
+        <ul>
+            <li><span>HOME</span></li>
+            <li><span>ABOUT</span></li>
+            <li><span>SERVICES</span></li>
+            <li><span>SKILLS</span></li>
+            <li><span>CONTACT</span></li>
+        </ul>
+    </div>
+
+    <div class="footernavbutton">
+        <a href="https://www.facebook.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://steamcommunity.com/id/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Steam">
+            <i class="fab fa-steam"></i>
+        </a>
+    </div>
+</footer>
+
+  
+</body>
+</html>
+

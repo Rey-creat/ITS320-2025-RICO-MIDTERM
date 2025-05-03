@@ -1,0 +1,23 @@
+<!-- Title -->
+<p class="text-3xl font-extrabold text-black-500 text-center mb-6 underline font-serif">
+    Display Quotes Works!
+</p>
+
+<!-- Flex container for responsive layout -->
+<div class="flex flex-wrap justify-center gap-4 sm:gap-6 p-4">
+    <div *ngFor="let qoute of quotes; let i = index" 
+         [ngClass]="i === 0 ? 'bg-yellow-200' : (qoute.author === 'Akira Toriyama' ? 'bg-cyan-200' : 'bg-dark-blue')" 
+         class="border border-pink-500 rounded-xl shadow-lg p-6 w-full max-w-xs sm:w-80 md:w-96 text-center 
+                transform hover:scale-105 transition duration-300 ">
+        
+        <p class="text-xs text-black font-mono">ID: 
+            <span class="font-semibold text-black">{{qoute._id}}</span>
+        </p>
+        <h2 class="text-xl font-bold text-black font-sans">{{qoute.title}}</h2>
+        <p class="text-black italic text-md font-serif mt-2">"{{qoute.quotes}}"</p>
+        <p class="text-sm font-medium text-black mt-4">Author: 
+            <span class="text-black font-bold">{{qoute.author}}</span>
+        </p>
+        <p class="text-xs text-black mt-2">Published: {{qoute.published}}</p>
+    </div>
+</div>
